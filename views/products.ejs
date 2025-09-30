@@ -1,0 +1,23 @@
+<form action="/products" method="GET">
+  <input type="text" name="search" class="form-control" placeholder="Search products..." value="<%= search %>" />
+  <button type="submit" class="btn btn-outline-primary">Search</button>
+</form>
+
+<table class="table table-bordered table-striped shadow-sm">
+  <thead class="table-dark">
+    <tr>
+      <th>ID</th>
+      <th>Product Name</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% products.forEach(product => { %>
+      <tr>
+        <td><%= product.id %></td>
+        <td><%= product.name %></td>
+        <td><%= product.price %></td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
